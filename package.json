@@ -14,14 +14,7 @@
     "browserify": "mkdirp build/js && browserify src/js/main.js -o build/js/main.js",
     "sass": "node-sass src/css/style.scss -o build/css --output-style=compressed",
     "sass:watch": "node-sass src/css/style.scss --output=build/css --source-map-contents=true --source-map-embed=true && node-sass src/css/style.scss --watch src/css/style.css --output=build/css --source-map-contents=true --source-map-embed=true",
-    "img": "mkdirp build/img && cp src/img/* build/img/",
-    "gh-pages-deploy": {
-      "staticpath": "build",
-      "prep": [
-        "build"
-      ],
-      "noprompt": false
-    }
+    "img": "mkdirp build/img && cp src/img/* build/img/"
   },
   "browserify": {
     "transform": [
@@ -30,6 +23,13 @@
   },
   "watches": {
     "img": "src/img/**"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "build",
+    "prep": [
+      "build"
+    ],
+    "noprompt": false
   },
   "author": "Brendan Heberton",
   "license": "",
