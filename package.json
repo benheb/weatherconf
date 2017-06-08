@@ -1,9 +1,10 @@
 {
-  "name": "acetate-cli-sample",
+  "name": "weatherconf",
   "version": "1.0.0",
-  "description": "Example showing how to use Acetate in an NPM based build system",
+  "description": "WeatherCong Site",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages-deploy",
     "start": "rimraf build && npm run dev",
     "dev": "acetate server | npm run watchify | npm run sass:watch | rerun-script | npm run img",
     "assets": "npm run browserify | npm run sass | npm run img",
@@ -13,7 +14,14 @@
     "browserify": "mkdirp build/js && browserify src/js/main.js -o build/js/main.js",
     "sass": "node-sass src/css/style.scss -o build/css --output-style=compressed",
     "sass:watch": "node-sass src/css/style.scss --output=build/css --source-map-contents=true --source-map-embed=true && node-sass src/css/style.scss --watch src/css/style.css --output=build/css --source-map-contents=true --source-map-embed=true",
-    "img": "mkdirp build/img && cp src/img/* build/img/"
+    "img": "mkdirp build/img && cp src/img/* build/img/",
+    "gh-pages-deploy": {
+      "staticpath": "build",
+      "prep": [
+        "build"
+      ],
+      "noprompt": false
+    }
   },
   "browserify": {
     "transform": [
@@ -23,8 +31,8 @@
   "watches": {
     "img": "src/img/**"
   },
-  "author": "Patrick Arlt <patrick.arlt@gmail.com>",
-  "license": "ISC",
+  "author": "Brendan Heberton",
+  "license": "",
   "devDependencies": {
     "acetate": "^1.0.0",
     "acetate-asset-revisions": "^1.0.0",
