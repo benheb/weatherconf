@@ -1,11 +1,10 @@
 ---
-title: Using Layouts
+title: Unsettled Patterns
 layout: _layout:page
 ---
 
-<h1 id="conference-title">Unsettled Patterns</h1>
-
-<h6>UP is a conference devoted to weather data and visualization</h6>
+<h5>What's UP?</h5>
+<h6>A conference devoted to weather data and visualization</h6>
 
 <div id="date">
   <div>Denver, CO</div>
