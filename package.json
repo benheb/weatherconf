@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages-deploy",
-    "start": "npm run dev",
+    "start": "npm install && rimraf build && npm run dev",
     "dev": "acetate server | npm run watchify | npm run sass:watch | rerun-script | npm run img",
     "assets": "npm run browserify | npm run sass | npm run img",
-    "build": "npm run assets && npm run rev && acetate build",
+    "build": "rimraf build && npm run assets && npm run rev && acetate build",
     "rev": "hashmark --cwd build -l 8 --asset-map=build/asset-manifest.json '{js,img,css}/**/*.{css,js,png,gif,jpg,jpeg}' '{dir}/{name}.{hash}{ext}'",
     "watchify": "mkdirp build/js && watchify src/js/main.js -o build/js/main.js -d",
     "browserify": "mkdirp build/js && browserify src/js/main.js -o build/js/main.js",
@@ -33,20 +33,6 @@
   },
   "author": "Brendan Heberton",
   "license": "",
-  "dependences": {
-    "acetate": "^1.0.0",
-    "acetate-asset-revisions": "^1.0.0",
-    "acetate-cli": "^1.0.0",
-    "babelify": "^7.3.0",
-    "browserify": "^13.0.1",
-    "hashmark": "^3.1.0",
-    "imagemin-newer": "^1.0.1",
-    "mkdirp": "^0.5.1",
-    "node-sass": "^3.7.0",
-    "rerun-script": "^0.6.0",
-    "rimraf": "^2.5.2",
-    "watchify": "^3.7.0"
-  },
   "devDependencies": {
     "acetate": "^1.0.0",
     "acetate-asset-revisions": "^1.0.0",
