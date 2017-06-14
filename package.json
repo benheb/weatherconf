@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages-deploy",
-    "start": "rimraf build && npm run dev",
+    "start": "npm run dev",
     "dev": "acetate server | npm run watchify | npm run sass:watch | rerun-script | npm run img",
     "assets": "npm run browserify | npm run sass | npm run img",
-    "build": "rimraf build && npm run assets && npm run rev && acetate build",
+    "build": "npm run assets && npm run rev && acetate build",
     "rev": "hashmark --cwd build -l 8 --asset-map=build/asset-manifest.json '{js,img,css}/**/*.{css,js,png,gif,jpg,jpeg}' '{dir}/{name}.{hash}{ext}'",
     "watchify": "mkdirp build/js && watchify src/js/main.js -o build/js/main.js -d",
     "browserify": "mkdirp build/js && browserify src/js/main.js -o build/js/main.js",
