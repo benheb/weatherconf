@@ -57,25 +57,17 @@ h6 {
   // -o-background-size: cover;
   // background-size: cover;
   // position: relative;
-  #conference-title {
-    position: absolute;
-    bottom: 35%;
-    font-size: 4.4rem;
-    width: 100%;
-    text-align: center;
-    letter-spacing: .35em;
-    text-shadow: rgba(0, 0, 0, 0.14902) 0px 0px 12px;
-    //font-family: 'Unica One', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-family: 'Lato', sans-serif;
-    // color: #FCFDF8;
-    // font-size: 3.9rem;
-    // width: 100%;
-    // text-align: center;
-    // margin-bottom: 0px;
-    padding: 0px;
-    margin: 0px;
-    line-height: 3.5rem;
-  }
+}
+
+#conference-title {
+  font-size: 4.4rem;
+  text-align: center;
+  letter-spacing: .35em;
+  text-shadow: rgba(0, 0, 0, 0.14902) 0px 0px 12px;
+  font-family: 'Lato', sans-serif;
+  max-width: 80%;
+  margin:auto;
+  margin-top: 50px;
 }
 
 .section {
