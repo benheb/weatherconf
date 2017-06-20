@@ -41,9 +41,6 @@ layout: _layout:page
         </div>
     </form>
     </div>
-
-    <!--End mc_embed_signup-->
-    <!-- <div><a href="#">coming soon</a></div> -->
   </div>
 
   <div class="section">
