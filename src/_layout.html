@@ -3,6 +3,9 @@
 <head>
   <title>{{title}}</title>
 
+   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+
    {% css "css/style.css" %}
 
    <script>
@@ -17,11 +20,12 @@
 </head>
 <body>
   <div id="header">
-    <iframe width="100%" height="400px" style="z-index:0" src="https://cryptic-brook-63919.herokuapp.com/model-viewer"></iframe>
+    <div id="map"></div>
   </div>
   <div class="content">
     {% block page %}{% endblock %}
   </div>
   <div id="footer"></div>
 </body>
+{% js "js/main.js" %}
 </html>
