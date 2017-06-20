@@ -2,16 +2,16 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmhlYmVydG8iLCJhIjoiY2o0NHkwajFiMTRiZDJ3cnV3NXZ2ZDdhaCJ9.ldXvHTNSDKyK_f82a2k6Xg';
 var map = new mapboxgl.Map({
   container: 'map', // container id
-  style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
-  center: [-74.50, 40], // starting position
-  zoom: 3 // starting zoom
+  style: 'mapbox://styles/mapbox/light-v9', //stylesheet location
+  center: [20.50, 50], // starting position
+  zoom: 1.3 // starting zoom
 });
 
 
 map.on('load', function() {
   map.addSource('gfs-source', {
     'type': 'vector',
-    'tiles': ['https://s3-us-west-2.amazonaws.com/weather-api/tiles/models/gfs/2017042706/t06z/054/lev_2_m_above_ground/TMP/{z}/{x}/{y}.mvt']
+    'tiles': ['https://s3-us-west-2.amazonaws.com/weather-api/tiles/models/gfs/2017042100/t00z/012/lev_2_m_above_ground/TMP/{z}/{x}/{y}.mvt']
   });
 
   map.addLayer({
@@ -67,8 +67,8 @@ map.on('load', function() {
       },
       'fill-opacity': 0.85
     }
-  }, 'building' );
-  // }, 'water' );//looks cool!
+  // }, 'building' );
+  }, 'water' );//looks cool!
 
   // map.addLayer({
   //   'id': layer.subLayer.id,
