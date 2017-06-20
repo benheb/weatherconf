@@ -108,3 +108,14 @@ h6 {
   width: 100%;
 
 }
+
+@media (max-width: 600px) {
+  #conference-title {
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: .1em;
+  }
+  h6 {
+    font-size: 0.7rem;
+  }
+}
