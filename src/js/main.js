@@ -71,19 +71,19 @@ map.on('load', function() {
   }, 'water' );//looks cool!
 
   // map.addLayer({
-  //   'id': layer.subLayer.id,
-  //   'source': layer.source,
+  //   'id': 'gfs-labels',
+  //   'source': 'gfs-source',
   //   'source-layer': 'geojsonLayer',
-  //   "type": layer.subLayer.type,
+  //   "type": 'symbol',
   //   'layout': {
   //     "symbol-placement": "line",
-  //     "text-field": layer.subLayer.text,
+  //     "text-field": '{DN} °C',
   //     "text-font": ["Open Sans Regular","Arial Unicode MS Regular"],
   //     "text-letter-spacing": 0,
   //     "text-line-height": 1.6,
   //     "text-rotation-alignment": "viewport",
   //     "text-size": 10,
-  //     'visibility': layer.visible
+  //     'visibility': 'visible'
   //   },
   //   "paint": {
   //     "text-opacity": 1,
@@ -92,6 +92,39 @@ map.on('load', function() {
   //     "text-halo-blur": 0.5,
   //     "text-color": "#222"
   //   }
-  // }, 'place-town' );
+  // }, 'water' );
+
+
+  setTimeout(function() {
+    map.flyTo({
+      center: [
+        -104,
+        40
+      ],
+      zoom: 6,
+      bearing: 0,
+      speed: 0.4, // make the flying slow
+      curve: 1.4, // change the speed at which it zooms out
+      easing: function (t) {
+        return t;
+      }
+    });
+  },2000);
+
+  // setTimeout(function() {
+  //   map.flyTo({
+  //     center: [
+  //       -74,
+  //       41
+  //     ],
+  //     zoom: 7,
+  //     bearing: 0,
+  //     speed: 1.5, // make the flying slow
+  //     curve: 5, // change the speed at which it zooms out
+  //     easing: function (t) {
+  //       return t;
+  //     }
+  //   });
+  // },7000);
 
 });
