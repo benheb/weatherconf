@@ -1,13 +1,14 @@
 ---
-title: Unsettled Patterns
+title: Unsettled Patterns | A Weather Conference
 layout: _layout:page
 ---
 
 <div id="content">
-  <h1 id="conference-title">Unsettled Patterns</h1>
+  <h1 id="conference-title">U<span class="lighten">nsettled</span> P<span class="lighten">atterns</span></h1>
+  <!-- <h1 id="conference-title">Unsettled Weather.Conf</h1> -->
 
   <h5>What's UP?</h5>
-  <h6>A conference devoted to weather data visualization</h6>
+  <h6>A conference devoted to weather data and visualization</h6>
 
   <div class="section" id="date">
     <div>Denver, CO</div>
@@ -27,8 +28,7 @@ layout: _layout:page
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <style type="text/css">
     	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-    	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-    	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.We recommend moving this block and the preceding CSS link to the HEAD of your HTML file.*/
     </style>
     <div id="mc_embed_signup">
     <form action="//weather5280.us6.list-manage.com/subscribe/post?u=3e5570974f&amp;id=85fcebd444" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -51,4 +51,5 @@ layout: _layout:page
     <div class="font-big">Sponsors</div>
     <p>Interested in sponsoring UP? Get in touch: <a href="mailto:support@weather5280.com">support@weather5280.com</a></p>
   </div>
+
 </div>

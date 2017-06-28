@@ -1,7 +1,7 @@
 {
   "name": "weatherconf",
   "version": "1.0.0",
-  "description": "WeatherCong Site",
+  "description": "Unsettled Patterns Conference Site",
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages-deploy",
